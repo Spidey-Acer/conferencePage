@@ -30,6 +30,15 @@
     background-position: center;
     height: 4em;
     width: 100%;
+    position: fixed;
+  }
+
+  .main-nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
   }
 
   .menu-button {
@@ -142,7 +151,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 820px;
+    height: 100vh;
     width: 100%;
     background-image: url(./assets/images/home.jpg);
     background-repeat: no-repeat;
@@ -176,8 +185,8 @@
 
   .welcome-msg h1 {
     height: fit-content;
-    font-size: 3.5em;
-    line-height: 1.2em;
+    font-size: 2.5em;
+    line-height: 1em;
     font-family: 'Lato', sans-serif;
     font-weight: 900;
     text-align: left;
@@ -194,7 +203,7 @@
 
   .msg2 {
     color: #272a31;
-    font-size: 1.3em;
+    font-size: 0.8em;
     font-family: 'Lato', sans-serif;
     text-align: left;
     font-weight: 600;
@@ -202,6 +211,8 @@
     padding: 1em;
     border-radius: 10px;
     box-shadow: 0 0 10px #00aaff;
+    margin-top: 35px;
+    margin-bottom: 35px;
     margin-left: 2em;
     margin-right: 2em;
   }
@@ -214,7 +225,7 @@
 
   .date {
     width: 100%;
-    font-size: 2em;
+    font-size: 20px;
     line-height: 0.9em;
     font-family: 'Lato', sans-serif;
     font-weight: 900;
@@ -227,15 +238,15 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    padding-left: 1em;
   }
 
   .date h3 {
     padding-right: 3.5em;
-    font-size: 0.6em;
+    font-size: 20px;
     line-height: 0.9em;
     font-family: 'Lato', sans-serif;
-    font-weight: 900;
-    text-align: right;
+    text-align: left;
     background-image: url(./assets/images/navBG.jpg);
     background-repeat: no-repeat;
     background-size: cover;

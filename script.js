@@ -1,18 +1,18 @@
-const menuButton = document.querySelector(".menu-button");
-const closeButton = document.querySelector(".close-button");
-const mobileMenu = document.querySelector(".mobile-menu");
-const mobileMenuItem = document.querySelectorAll(".mobile-menu-item");
+const menuButton = document.querySelector('.menu-button');
+const closeButton = document.querySelector('.close-button');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuItem = document.querySelectorAll('.mobile-menu-item');
 
 function showMobileMenu() {
-  mobileMenu.style.display = "flex";
+  mobileMenu.style.display = 'flex';
 }
 
 function hideMobileMenu() {
-  mobileMenu.style.display = "none";
+  mobileMenu.style.display = 'none';
 }
 
 function toggleMobileMenu() {
-  if (mobileMenu.style.display === "none") {
+  if (mobileMenu.style.display === 'none') {
     showMobileMenu();
   } else {
     hideMobileMenu();
@@ -21,22 +21,34 @@ function toggleMobileMenu() {
 
 function handleMobileMenuItemClick(event) {
   const { target } = event;
-  const sectionId = target.getAttribute("href").substring(1);
+  const sectionId = target.getAttribute('href').substring(1);
 
   hideMobileMenu();
 
   document.querySelector(sectionId).scrollIntoView({
-    behavior: "smooth",
-    block: "start",
+    behavior: 'smooth',
+    block: 'start',
   });
 }
 
 // Hide the mobile menu by default
 hideMobileMenu();
 
-menuButton.addEventListener("click", toggleMobileMenu);
-closeButton.addEventListener("click", hideMobileMenu);
+menuButton.addEventListener('click', toggleMobileMenu);
+closeButton.addEventListener('click', hideMobileMenu);
 
 mobileMenuItem.forEach((item) => {
-  item.addEventListener("click", handleMobileMenuItemClick);
+  item.addEventListener('click', handleMobileMenuItemClick);
+});
+
+// sticky mobile menu
+
+const stickyMobileMenu = document.querySelector('.main-nav');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    stickyMobileMenu.classList.add('sticky');
+  } else {
+    stickyMobileMenu.classList.remove('sticky');
+  }
 });
