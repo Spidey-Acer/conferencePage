@@ -170,7 +170,6 @@
     width: 100%;
     /* background-color: lime; */
     backdrop-filter: blur(0.1em);
-    gap: 0.2em;
   }
 
   .msg1 {
@@ -181,6 +180,7 @@
     align-self: flex-start;
     font-weight: 600;
     padding: 0.5em;
+    margin-bottom: 1em;
   }
 
   .welcome-msg h1 {
@@ -199,6 +199,7 @@
     color: transparent;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    margin-bottom: 1em;
   }
 
   .msg2 {
@@ -212,7 +213,7 @@
     border-radius: 10px;
     box-shadow: 0 0 10px #00aaff;
     margin-top: 35px;
-    margin-bottom: 35px;
+    margin-bottom: 80px;
     margin-left: 2em;
     margin-right: 2em;
   }
@@ -256,8 +257,217 @@
     color: transparent;
   }
 
+  /* --Main Program Section--*/
+  #program {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url(./assets/images/navBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
 
+  #program h2 {
+    color: white;
+    font-size: 2em;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    padding: 0.5em;
+  }
 
+  #program h2::after {
+    content: "";
+    display: block;
+    height: 5px;
+    border-radius: 10px;
+    width: 100px;
+    background-color: #f5653d;
+    margin: 0 auto;
+    margin-top: 0.3em;
+  }
+
+  .program-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    gap: 0.2em;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  .program-tile {
+    position: relative;
+    /* Set position to enable pseudo-element */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 0.2em;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 99;
+  }
+
+  .program-tile::after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 58px;
+    border-radius: 10px 20px 20px 10px;
+    background-color: #f5653d;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    z-index: -99;
+  }
+
+  .program-tile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    z-index: -99;
+  }
+
+  .program-tile:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    color: #272a31;
+  }
+
+  .tile-img {
+    height: 60px;
+    width: 60px;
+    border: 0.1em solid #fff;
+    overflow: none;
+    border-radius: 20px;
+  }
+
+  .tile-img i {
+    font-size: 3em;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 0.2em;
+  }
+
+  .program-title {
+    font-size: 0.85em;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    font-weight: 900;
+    padding: 0.5em;
+    color: #f5653d;
+  }
+
+  .program-desc {
+    font-size: 0.8em;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    font-weight: 200;
+    font-style: bold;
+    line-height: 1.3em;
+    padding: 0.5em;
+    color: #fff;
+  }
+
+  .joinButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 350px;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 99;
+    background-color: #f5653d;
+  }
+
+  /*--Speaker Section-- */
+  #speakers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1080px;
+    width: 100%;
+    background-image: url(./assets/images/navBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  #speakers h2 {
+    color: white;
+    font-size: 2em;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    padding: 0.5em;
+  }
+
+  #speakers h2::after {
+    content: "";
+    display: block;
+    height: 5px;
+    border-radius: 10px;
+    width: 100px;
+    background-color: #f5653d;
+    margin: 0 auto;
+    margin-top: 0.3em;
+  }
+
+  .speaker-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80%;
+    width: 95%;
+    gap: 0.2em;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: blueviolet;
+    border-radius: 20px;
+  }
+
+  .speaker-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    gap: 0.2em;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 99;
+    background-color: lime;
+  }
 }
 
 /* --Styles for desktop screens-- */
