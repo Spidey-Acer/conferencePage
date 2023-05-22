@@ -14,13 +14,19 @@
 
 /* --Styles for mobile screens-- */
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
+
+  /* --Navigation-- */
+
   .top-bar {
     display: none;
   }
 
   .main-nav {
-    background-color: red;
+    background-image: url(./assets/images/navBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 4em;
     width: 100%;
   }
@@ -81,7 +87,7 @@
     width: 2em;
     position: absolute;
     top: 0;
-    left: 0;
+    margin: 1em;
   }
 
   .close-button i {
@@ -128,6 +134,106 @@
     background-color: rgb(21, 21, 134);
     border-radius: 2em;
   }
+
+  /* --Home Section-- */
+  #home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 807px;
+    width: 100%;
+    background-image: url(./assets/images/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    backdrop-filter: blur(0);
+  }
+
+  /* #home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: -99;
+  } */
+
+  .welcome-msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* background-color: lime; */
+    backdrop-filter: blur(0.1em);
+    overflow: scroll;
+    gap: 0.2em;
+  }
+
+  .msg1 {
+    color: #f5653d;
+    font-size: 1.8em;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    align-self: flex-start;
+    font-weight: 600;
+    padding: 0.5em;
+  }
+
+  .welcome-msg h1 {
+    font-size: 4.2em;
+    line-height: 0.9em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    text-align: left;
+    background-image: url(./assets/images/navBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .msg2 {
+    color: #272a31;
+    font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    align-self: flex-start;
+    font-weight: 600;
+    border: 2px solid #00aa;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00aaff;
+    margin: 2em;
+  }
+
+  .date {
+    font-size: 2.9em;
+    line-height: 0.9em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    background-image: url(./assets/images/navBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+
+
 }
 
 /* --Styles for desktop screens-- */
