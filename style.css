@@ -411,13 +411,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 1080px;
+    height: fit-content;
     width: 100%;
     background-image: url(./assets/images/navBG.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
+    padding-bottom: 2em;
   }
 
   #speakers h2 {
@@ -445,7 +446,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 80%;
+    height: fit-content;
     width: 95%;
     gap: 0.2em;
     padding: 1em;
@@ -459,7 +460,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 110px;
+    height: 160px;
     width: 100%;
     gap: 0.2em;
     color: #fff;
@@ -470,8 +471,8 @@
   }
 
   .speaker-img {
-    height: 120px;
-    width: 120px;
+    height: 100%;
+    width: 30%;
     border: 0.1em solid #fff;
     overflow: none;
     background-color: red;
@@ -482,13 +483,56 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-
-
+    border-radius: 80px;
   }
-}
 
-/* --Styles for desktop screens-- */
+  .speaker-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 70%;
+    gap: 0.2em;
+    padding: 0.5em;
+    background-color: blue;
+    border-radius: 20px;
+  }
 
-@media screen and (min-width: 769px) {}
 
-``` ```
+
+  #show-more-button {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    height: 60px;
+    width: 350px;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 999;
+    background-color: #f5653d;
+  }
+
+  #show-less-button {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    height: 60px;
+    width: 350px;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 999;
+    background-color: #ff3700;
+  }
+
+  /* --Styles for desktop screens-- */
+
+  @media screen and (min-width: 769px) {}
+
+  ``` ```
