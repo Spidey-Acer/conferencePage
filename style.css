@@ -383,7 +383,7 @@
     font-size: 0.8em;
     font-family: 'Lato', sans-serif;
     text-align: left;
-    font-weight: 200;
+    font-weight: 300;
     font-style: bold;
     line-height: 1.3em;
     padding: 0.5em;
@@ -448,17 +448,15 @@
     align-items: center;
     height: fit-content;
     width: 95%;
-    gap: 0.2em;
-    padding: 1em;
+    gap: 0.5em;
     margin-bottom: 1em;
-    background-color: blueviolet;
     border-radius: 20px;
   }
 
   .speaker-tile {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     height: 160px;
     width: 100%;
@@ -467,7 +465,18 @@
     border-radius: 20px;
     overflow: hidden;
     z-index: 99;
-    background-color: lime;
+  }
+
+  .speaker-tile::before {
+    content: "";
+    position: absolute;
+    height: 160px;
+    width: 100%;
+    border-radius: 10px 20px 20px 10px;
+    background-color: rgba(253, 143, 80, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: -99;
+
   }
 
   .speaker-img {
@@ -483,7 +492,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 80px;
+    border-radius: 30px;
   }
 
   .speaker-details {
@@ -493,11 +502,37 @@
     align-items: flex-start;
     height: 100%;
     width: 70%;
-    gap: 0.2em;
-    padding: 0.5em;
-    background-color: blue;
-    border-radius: 20px;
   }
+
+  .speaker-name {
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    font-weight: 900;
+    padding: 0.5em;
+    color: #f5653d;
+  }
+
+  .speaker-title {
+    font-size: 0.6em;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    font-weight: 900;
+    padding: 0.5em;
+    color: #f5653d;
+  }
+
+  .speaker-description {
+    font-size: 10px;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    font-weight: 700px;
+    font-style: bold;
+    line-height: 14px;
+    padding: 0.5em;
+    color: #fff;
+  }
+
 
 
 
