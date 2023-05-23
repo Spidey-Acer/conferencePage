@@ -456,17 +456,34 @@
 
   .speaker-tile {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 150px;
+    height: 110px;
     width: 100%;
     gap: 0.2em;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     z-index: 99;
     background-color: lime;
+  }
+
+  .speaker-img {
+    height: 120px;
+    width: 120px;
+    border: 0.1em solid #fff;
+    overflow: none;
+    background-color: red;
+    border-radius: 30px;
+  }
+
+  .speaker-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+
   }
 }
 
