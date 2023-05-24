@@ -50,5 +50,7 @@ window.addEventListener("scroll", () => {
     stickyMobileMenu.classList.add("sticky");
   } else {
     stickyMobileMenu.classList.remove("sticky");
+
+    stickyMobileMenu.classList.remove("sticky");
   }
 });
