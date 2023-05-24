@@ -410,4 +410,371 @@
 
 /* --Styles for desktop-- */
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+
+    /* --Home Section-- */
+    #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 857px;
+        width: 100%;
+        background-image: url(./pageAssets/home.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        backdrop-filter: blur(0);
+        z-index: 1;
+        padding: 100px 140px;
+    }
+
+    .welcome-msg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 0.5em;
+    }
+
+    .welcome-msg::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .msg1 {
+        display: none;
+    }
+
+    .welcome-msg h1 {
+        height: fit-content;
+        font-size: 3.5em;
+        line-height: 1em;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        text-align: center;
+        background-image: url(./pageAssets/homeBG.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        margin-bottom: 0.2em;
+        position: relative;
+    }
+
+    .welcome-msg h1::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 5px;
+        border-radius: 20px;
+        background-color: #f5653d;
+        margin-top: 10px;
+        margin: 10px auto;
+    }
+
+    .msg2 {
+        height: fit-content;
+        width: 100%;
+        color: #000;
+        font-size: 1em;
+        font-family: 'Lato', sans-serif;
+        text-align: left;
+        font-weight: 600;
+        border: 2px solid #00aa;
+        padding: 1em;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #00aaff;
+        margin-top: 35px;
+        margin-bottom: 20px;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .bold {
+        font-weight: 900;
+        color: #f5653d;
+        text-transform: uppercase;
+    }
+
+    .contact {
+        width: 100%;
+        font-size: 20px;
+        line-height: 0.9em;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .contact::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .contact p {
+        font-size: 20px;
+        line-height: 1em;
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+    }
+
+    .contact span {
+        font-size: 20px;
+        line-height: 0.9em;
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        color: #272a31;
+    }
+
+    .contact span:hover {
+        color: #f5653d;
+    }
+
+    /* --Company Info -- */
+
+    #company-info {
+        height: fit-content;
+        width: 100%;
+        /* background-image: url(./pageAssets/home.jpg); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-top: 100px;
+    }
+
+
+    #company-info h3 {
+        color: #000;
+        font-size: 30px;
+        font-family: 'Lato', sans-serif;
+        line-height: 28px;
+        text-align: center;
+        align-self: center;
+        font-weight: 700;
+        padding: 0.5em;
+    }
+
+    #company-info h3::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 5px;
+        border-radius: 20px;
+        background-color: #f5653d;
+        margin: 0.5em auto;
+    }
+
+    #company-info .mobile-det {
+        display: none;
+    }
+
+    .desktop-extra {
+        color: #000;
+        font-size: 16px;
+        font-family: 'Lato', sans-serif;
+        line-height: 28px;
+        text-align: center;
+        align-self: center;
+        font-weight: 400;
+        padding: 0.5em;
+        margin-bottom: 1em;
+    }
+
+    .company-img {
+        height: 150px;
+        width: 100%;
+        background-image: url(./pageAssets/company.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        backdrop-filter: blur(0);
+        z-index: 1;
+        padding: 1em;
+    }
+
+    .company-img img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .previous-summits h3 {
+        color: #000;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+        line-height: 28px;
+        text-align: center;
+        align-self: center;
+        font-weight: 600;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        height: 50px;
+        width: 100%;
+    }
+
+    .previous-summits h3::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 5px;
+        border-radius: 20px;
+        background-color: #f5653d;
+        margin-top: 10px;
+        margin: 10px auto;
+    }
+
+    .previous-summits p {
+        color: #000;
+        font-size: 16px;
+        font-family: 'Lato', sans-serif;
+        line-height: 28px;
+        text-align: center;
+        align-self: center;
+        font-weight: 400;
+        padding: 0.5em;
+        margin-bottom: 1em;
+    }
+
+    .previous-summits ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        list-style: none;
+        padding: 1em;
+        margin: 0;
+        gap: 1em;
+    }
+
+    .previous-summits ul li {
+        height: 256px;
+        width: 432px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        margin-bottom: 1em;
+        border-radius: 10px;
+    }
+
+    .previous-summits li:nth-child(1) {
+        background-image: url(./pageAssets/moscow-kremlin-summer-night.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .previous-summits li:nth-child(2) {
+        background-image: url(./pageAssets/sunrise-vasco-da-gama-bridge-lisbon-portugal.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .previous-summits ul li a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 1;
+    }
+
+    .previous-summits ul li a span {
+        color: #272a31;
+        font-size: 30px;
+        font-family: 'Lato', sans-serif;
+        line-height: 28px;
+        text-align: center;
+        align-self: center;
+        font-weight: 700;
+        padding: 0.5em;
+        text-transform: uppercase;
+    }
+
+    .previous-summits ul li a p {
+        color: #272a31;
+        font-size: 18px;
+        font-family: 'Lato', sans-serif;
+        line-height: 28px;
+        text-align: center;
+        align-self: center;
+        font-weight: 900;
+        padding: 0.5em;
+    }
+
+    #partners {
+        display: none;
+    }
+
+    footer {
+        height: 245px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        background-color: #272a31;
+        color: #fff;
+        font-size: 15px;
+        font-family: 'Lato', sans-serif;
+        line-height: 28px;
+        text-align: center;
+        align-self: center;
+        font-weight: 400;
+        padding: 0.5em;
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    footer h1 {
+        color: #fff;
+        font-size: 30px;
+        font-family: 'Lato', sans-serif;
+        line-height: 28px;
+        text-align: center;
+        align-self: center;
+        font-weight: 700;
+        padding: 0.5em;
+        text-transform: uppercase;
+    }
+}
