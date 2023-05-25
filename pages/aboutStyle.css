@@ -619,7 +619,7 @@
   #company-info::before {
     content: "";
     position: absolute;
-    height: 1090px;
+    height: 1040px;
     width: 100%;
     background-image: url(./pageAssets/home.jpg);
     backdrop-filter: blur(0.1em);

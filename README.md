@@ -152,7 +152,7 @@ If you like this project please leave a review or comment. A star on the repo wo
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank my teammates and Microverse for making this possible.
+Special thanks to Cindy Shin for the original design concept used in this project. The design is licensed under the Creative Commons License, and Cindy Shin's work served as a valuable inspiration for our project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
