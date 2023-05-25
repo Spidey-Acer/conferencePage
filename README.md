@@ -112,13 +112,13 @@ To run tests, run the following command:
 
 ### Deployment
 
-You can deploy this project using: <https://peter-kibet.github.io/Peter-K-Portfolio/>
+You can deploy this project using: <https://peter-kibet.github.io/conferencePage/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📽️Loom Walk through
 
-### [📺Watch the video](https://www.loom.com/share/441d877fa21742e68c328fbd0681cdb5)
+### [📺Watch the video]()
 
 ## 👥 Authors <a name="authors"></a>
 
