@@ -64,6 +64,96 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set the number of speakers to show initially (for mobile and tablet)
   const initialNumberOfSpeakers = 2;
 
+  // Show less button click event handler
+  function handleShowLessButtonClick() {
+    const additionalSpeakers = Array.from(speakersList.children).filter(
+      (_, index) => index >= initialNumberOfSpeakers,
+    );
+
+    // Hide the additional speakers
+    additionalSpeakers.forEach((speaker) => {
+      speaker.style.display = 'none';
+    });
+
+    // Remove the "Show Less" button
+    const showLessButton = document.getElementById('show-less-button');
+    showLessButton.parentNode.removeChild(showLessButton);
+
+    // Show the "Show More" button
+    const showMoreButton = document.getElementById('show-more-button');
+    showMoreButton.style.display = 'block';
+  }
+
+  // Show more button click event handler
+  function handleShowMoreButtonClick() {
+    const additionalSpeakers = Array.from(speakersList.children).filter(
+      (_, index) => index >= initialNumberOfSpeakers,
+    );
+
+    // Toggle display of additional speakers
+    additionalSpeakers.forEach((speaker) => {
+      speaker.style.display = speaker.style.display === 'none' ? 'flex' : 'none';
+    });
+
+    // Check if all speakers are visible
+    const allSpeakersVisible = additionalSpeakers.every(
+      (speaker) => speaker.style.display === 'flex',
+    );
+
+    if (allSpeakersVisible) {
+      // Hide the "Show More" button
+      const showMoreButton = document.getElementById('show-more-button');
+      showMoreButton.style.display = 'none';
+
+      // Create and append the "Show Less" button
+      const showLessButton = document.createElement('button');
+      showLessButton.id = 'show-less-button';
+      showLessButton.textContent = 'Show Less';
+      speakersList.parentNode.insertBefore(
+        showLessButton,
+        speakersList.nextSibling,
+      );
+
+      // Show less button click event handler
+      showLessButton.addEventListener('click', handleShowLessButtonClick);
+    }
+  }
+
+  // Function to create a speaker tile element
+  function createSpeakerTile(speaker) {
+    const speakerTile = document.createElement('li');
+    speakerTile.classList.add('speaker-tile');
+
+    const speakerImg = document.createElement('div');
+    speakerImg.classList.add('speaker-img');
+    const img = document.createElement('img');
+    img.src = speaker.imageSrc;
+    img.alt = speaker.name;
+    speakerImg.appendChild(img);
+
+    const speakerDetails = document.createElement('div');
+    speakerDetails.classList.add('speaker-details');
+    const speakerName = document.createElement('h3');
+    speakerName.classList.add('speaker-name');
+    speakerName.textContent = speaker.name;
+    speakerDetails.appendChild(speakerName);
+
+    const speakerTitle = document.createElement('div');
+    speakerTitle.classList.add('speaker-title');
+    speakerTitle.textContent = speaker.speakerTitle;
+    speakerDetails.appendChild(speakerTitle);
+
+    const speakerDescription = document.createElement('div');
+    speakerDescription.classList.add('speaker-description');
+    speakerDescription.textContent = speaker.speakerDescription;
+    speakerDetails.appendChild(speakerDescription);
+
+    speakerTile.appendChild(speakerImg);
+    speakerTile.appendChild(speakerDetails);
+
+    return speakerTile;
+  }
+
   // Dynamically generate speaker tiles
   speakers.forEach((speaker, index) => {
     const speakerTile = createSpeakerTile(speaker);
@@ -102,95 +192,5 @@ document.addEventListener('DOMContentLoaded', () => {
     allSpeakers.forEach((speaker) => {
       speaker.style.display = 'flex';
     });
-  }
-
-  // Function to create a speaker tile element
-  function createSpeakerTile(speaker) {
-    const speakerTile = document.createElement('li');
-    speakerTile.classList.add('speaker-tile');
-
-    const speakerImg = document.createElement('div');
-    speakerImg.classList.add('speaker-img');
-    const img = document.createElement('img');
-    img.src = speaker.imageSrc;
-    img.alt = speaker.name;
-    speakerImg.appendChild(img);
-
-    const speakerDetails = document.createElement('div');
-    speakerDetails.classList.add('speaker-details');
-    const speakerName = document.createElement('h3');
-    speakerName.classList.add('speaker-name');
-    speakerName.textContent = speaker.name;
-    speakerDetails.appendChild(speakerName);
-
-    const speakerTitle = document.createElement('div');
-    speakerTitle.classList.add('speaker-title');
-    speakerTitle.textContent = speaker.speakerTitle;
-    speakerDetails.appendChild(speakerTitle);
-
-    const speakerDescription = document.createElement('div');
-    speakerDescription.classList.add('speaker-description');
-    speakerDescription.textContent = speaker.speakerDescription;
-    speakerDetails.appendChild(speakerDescription);
-
-    speakerTile.appendChild(speakerImg);
-    speakerTile.appendChild(speakerDetails);
-
-    return speakerTile;
-  }
-
-  // Show more button click event handler
-  function handleShowMoreButtonClick() {
-    const additionalSpeakers = Array.from(speakersList.children).filter(
-      (_, index) => index >= initialNumberOfSpeakers,
-    );
-
-    // Toggle display of additional speakers
-    additionalSpeakers.forEach((speaker) => {
-      speaker.style.display = speaker.style.display === 'none' ? 'flex' : 'none';
-    });
-
-    // Check if all speakers are visible
-    const allSpeakersVisible = additionalSpeakers.every(
-      (speaker) => speaker.style.display === 'flex',
-    );
-
-    if (allSpeakersVisible) {
-      // Hide the "Show More" button
-      const showMoreButton = document.getElementById('show-more-button');
-      showMoreButton.style.display = 'none';
-
-      // Create and append the "Show Less" button
-      const showLessButton = document.createElement('button');
-      showLessButton.id = 'show-less-button';
-      showLessButton.textContent = 'Show Less';
-      speakersList.parentNode.insertBefore(
-        showLessButton,
-        speakersList.nextSibling,
-      );
-
-      // Show less button click event handler
-      showLessButton.addEventListener('click', handleShowLessButtonClick);
-    }
-  }
-
-  // Show less button click event handler
-  function handleShowLessButtonClick() {
-    const additionalSpeakers = Array.from(speakersList.children).filter(
-      (_, index) => index >= initialNumberOfSpeakers,
-    );
-
-    // Hide the additional speakers
-    additionalSpeakers.forEach((speaker) => {
-      speaker.style.display = 'none';
-    });
-
-    // Remove the "Show Less" button
-    const showLessButton = document.getElementById('show-less-button');
-    showLessButton.parentNode.removeChild(showLessButton);
-
-    // Show the "Show More" button
-    const showMoreButton = document.getElementById('show-more-button');
-    showMoreButton.style.display = 'block';
   }
 });
