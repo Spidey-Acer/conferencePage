@@ -11,21 +11,21 @@
   box-sizing: border-box;
 }
 
-.header {
-  width: 100%;
-  position: absolute;
-}
-
-.header.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 2;
-}
-
 @media screen and (min-width: 375px) and (max-width: 768px) {
+  .header {
+    width: 100%;
+    position: absolute;
+  }
+
+  .header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+  }
+
   /* --Home Section-- */
   #about {
     display: flex;
@@ -436,6 +436,20 @@
 /* --Styles for desktop-- */
 
 @media screen and (min-width: 768px) {
+  .header {
+    width: 100%;
+    position: absolute;
+  }
+
+  .header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+  }
+
   /* --Home Section-- */
   #about {
     display: flex;
@@ -605,7 +619,7 @@
   #company-info::before {
     content: "";
     position: absolute;
-    height: 1000px;
+    height: 1350px;
     width: 100%;
     background-image: url(./pageAssets/home.jpg);
     backdrop-filter: blur(0.1em);

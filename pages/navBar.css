@@ -237,6 +237,7 @@
     background-position: center;
     position: relative;
     top: 2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .navbar ul {

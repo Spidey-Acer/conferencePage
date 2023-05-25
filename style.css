@@ -520,7 +520,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    height: 2000px;
+    height: 2250px;
     width: 100%;
     border-radius: 10px 20px 20px 10px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -534,7 +534,8 @@
     justify-content: flex-start;
     align-items: center;
     height: auto;
-    width: 100%;
+    width: 60%;
+    align-self: flex-start;
     backdrop-filter: blur(0.1em);
   }
 
@@ -638,19 +639,6 @@
     background-position: center;
     position: relative;
   }
-
-  /* #program::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 680px;
-    width: 100%;
-    border-radius: 10px 20px 20px 10px;
-    background-color: rgba(255, 252, 252, 0.1);
-    backdrop-filter: blur(0.1em);
-    z-index: 1;
-  } */
 
   #program h2 {
     color: white;
@@ -798,6 +786,8 @@
     align-items: center;
     height: auto;
     width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     background-image: url(./assets/images/home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -989,28 +979,56 @@
   }
 
   footer {
-    height: 250px;
+    height: 245px;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
     color: #272a31;
-    font-size: 25px;
+    font-size: 12px;
     font-family: 'Lato', sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
     font-weight: 400;
-
-    /* padding: 0.5em; */
     text-decoration: none;
     z-index: 1;
   }
 
   .logo-text {
     z-index: 1;
+  }
+
+  .footer-details p {
+    text-align: left;
+  }
+
+  .footer-img {
+    height: 100px;
+    width: 30%;
+    object-fit: contain;
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  .footer-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  .footer-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 70%;
+    z-index: 1;
+    padding-left: 20px;
   }
 }
