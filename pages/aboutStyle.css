@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 /* --Reset Styles-- */
 * {
@@ -30,7 +30,19 @@
     height: 4em;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 0;
+  }
+
+  .main-nav::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4em;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.8px);
+    z-index: -1;
   }
 
   .menu-button {
@@ -55,7 +67,7 @@
     width: 100%;
     color: white;
     font-size: 1.5em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-decoration: none;
     border-radius: 0.5em;
   }
@@ -160,7 +172,7 @@
     width: 90%;
     color: white;
     font-size: 1.5em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-decoration: none;
     border: 0.1em solid white;
     border-radius: 0.5em;
@@ -204,7 +216,7 @@
   }
 
   #about::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -231,7 +243,7 @@
   .msg1 {
     color: #f5653d;
     font-size: 1.2em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: center;
     align-self: center;
     font-weight: 600;
@@ -243,7 +255,7 @@
     height: auto;
     font-size: 2.5em;
     line-height: 1em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 900;
     text-align: center;
     background-image: url(./pageAssets/homeBG.jpg);
@@ -264,7 +276,7 @@
     max-width: 600px;
     color: #272a31;
     font-size: 0.8em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 600;
     border: 2px solid #00aa;
@@ -287,7 +299,7 @@
     width: 100%;
     font-size: 20px;
     line-height: 0.9em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 500;
     text-align: left;
     align-self: flex-start;
@@ -299,14 +311,14 @@
     padding-right: 3.5em;
     font-size: 20px;
     line-height: 0.9em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
   }
 
   .contact span {
     font-size: 20px;
     line-height: 0.9em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     color: #272a31;
   }
@@ -314,7 +326,7 @@
   .previous-summits ul li a span {
     color: #272a31;
     font-size: 30px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -345,7 +357,7 @@
   }
 
   #company-info::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -359,7 +371,7 @@
   .previous-summits h3 {
     color: #000;
     font-size: 20px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -382,7 +394,7 @@
   #company-info h3 {
     color: #000;
     font-size: 20px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -392,7 +404,7 @@
   }
 
   #company-info h3::after {
-    content: '';
+    content: "";
     display: block;
     width: 80px;
     height: 5px;
@@ -404,7 +416,7 @@
   .mobile-det {
     color: #000;
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -439,7 +451,7 @@
   .previous-summits p {
     color: #000;
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -500,7 +512,7 @@
   .previous-summits ul li a p {
     color: #272a31;
     font-size: 18px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -518,12 +530,13 @@
     text-decoration: none;
     background-color: #414246;
     z-index: 1;
+    flex-wrap: wrap;
   }
 
   #partners h3 {
     color: #fff;
     font-size: 20px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -557,6 +570,8 @@
     z-index: 1;
   }
 
+  /* Footer */
+
   footer {
     height: 100px;
     width: 100%;
@@ -568,7 +583,7 @@
     align-content: center;
     color: #272a31;
     font-size: 14px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -580,7 +595,7 @@
     background-color: #fff;
   }
 
-  footer img {
+  .footer-logo {
     height: 80px;
     width: 40%;
     position: relative;
@@ -591,141 +606,154 @@
     width: 60%;
   }
 
-  footer .footer-details p {
+  footer .footer-info {
     display: none;
   }
-
-
 }
 
 /* --Styles for desktop-- */
 
 @media screen and (min-width: 768px) {
- /* --Navigation Bar-- */
+  /* --Navigation Bar-- */
 
- .top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #3e3e3e;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 2em;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  padding-right: 20px;
-}
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3e3e3e;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 2em;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    padding-right: 20px;
+  }
 
-.top-bar ul {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  align-items: center;
-  list-style: none;
-  height: 100%;
-  width: 100%;
-}
+  .top-bar ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+  }
 
-.nav-links li a {
-  color: #333;
-  text-decoration: none;
-  padding: 5px 10px;
-  z-index: 1;
-}
+  .nav-links li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    z-index: 1;
+  }
 
-.top-bar ul li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 1em;
-  font-family: 'Lato', sans-serif;
-  text-decoration: none;
-}
+  .top-bar ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1em;
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+  }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 5em;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  padding-right: 20px;
-  top: 2em;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 5em;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
 
-}
+  .navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
 
-.navbar ul {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  list-style: none;
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
+  .navbar ul li a {
+    color: gray;
+    font-size: 1em;
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
 
-.navbar ul li a {
-  color: gray;
-  font-size: 1em;
-  font-family: 'Lato', sans-serif;
-  text-decoration: none;
-  padding: 5px 10px;
-}
+  .nav-links li:nth-child(1) a {
+    color: #f5653d;
+  }
 
-.nav-links li a:hover {
-  background-color: #333;
-  color: #fff;
-  border-radius: 3px;
-}
+  .nav-links ul li a:hover {
+    border: 2px solid #f5653d;
+    color: #fff;
+    border-radius: 3px;
+  }
 
-.navbar ul li a:hover {
-  background-color: #333;
-  color: #fff;
-  border-radius: 3px;
-}
+  .navbar ul li a:hover {
+    color: #000;
+    border-radius: 5px 10px 5px 10px;
+    border: 2px solid #f5653d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+  }
 
-.logo {
-  margin-right: 20em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1em;
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+  }
 
-}
+  .logo img {
+    height: 3.5em;
+  }
 
-.logo img {
-  height: 3.5em;
-}
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-}
+  .nav-links li {
+    margin-right: 10px;
+  }
 
-.nav-links li {
-  margin-right: 10px;
-}
+  .nav-links li:nth-child(6) {
+    border: 2px solid #f5653d;
+    padding: 0.8em;
+    border-radius: 5px 10px 5px 10px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #000;
+  }
 
-.navbar.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-}
+  .navbar.sticky,
+  .top-bar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
 
-/* --Navigation Bar-- */
-.main-nav {
-  display: none;
-}
+  /* --Navigation Bar-- */
+  .main-nav {
+    display: none;
+  }
 
   /* --Home Section-- */
   #about {
@@ -777,7 +805,7 @@
     height: auto;
     font-size: 3.5em;
     line-height: 1em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 900;
     text-align: center;
     background-image: url(./pageAssets/homeBG.jpg);
@@ -801,7 +829,6 @@
     height: 5px;
     border-radius: 20px;
     background-color: #f5653d;
-    
   }
 
   .msg2 {
@@ -809,7 +836,7 @@
     width: 100%;
     color: #000;
     font-size: 1em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 600;
     border: 2px solid #00aa;
@@ -829,7 +856,7 @@
     width: 100%;
     font-size: 20px;
     line-height: 0.9em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 500;
     text-align: center;
     display: flex;
@@ -855,22 +882,22 @@
   .contact p {
     font-size: 20px;
     line-height: 1em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: center;
   }
 
   .contact span {
     font-size: 20px;
     line-height: 0.9em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: center;
     color: #272a31;
   }
 
   .previous-summits ul li a span {
-    color: #272a31;
+    color: #fff;
     font-size: 30px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -911,7 +938,7 @@
   .previous-summits h3 {
     color: #000;
     font-size: 20px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -934,7 +961,7 @@
   #company-info h3 {
     color: #000;
     font-size: 30px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -943,7 +970,7 @@
   }
 
   #company-info h3::after {
-    content: '';
+    content: "";
     display: block;
     width: 80px;
     height: 5px;
@@ -959,13 +986,14 @@
   .desktop-extra {
     color: #000;
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
     font-weight: 400;
     padding: 0.5em;
-    margin-bottom: 1em;
+    margin: 0.5em auto;
+    max-width: 1000px;
   }
 
   .company-img {
@@ -987,10 +1015,10 @@
     object-fit: contain;
   }
 
-  .previous-summits p {
-    color: #000;
+  .prev-summit-txt {
+    color: #fff;
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -999,7 +1027,7 @@
     margin-bottom: 1em;
   }
 
-  .previous-summits ul {
+  .previous-summits .summits {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1012,7 +1040,7 @@
     gap: 1em;
   }
 
-  .previous-summits ul li {
+  .previous-summits .summits li {
     height: 256px;
     width: 432px;
     display: flex;
@@ -1027,6 +1055,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+  }
+
+  .previous-summits li:nth-child(1)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 17, 17, 0.3);
+    position: absolute;
   }
 
   .previous-summits li:nth-child(2) {
@@ -1034,12 +1072,27 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+  }
+
+  .previous-summits li:nth-child(2)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 17, 17, 0.3);
+    position: absolute;
+  }
+
+  .previous-summits .summits li .summit-year {
+    text-decoration: none;
+    color: #fff;
   }
 
   .previous-summits ul li a p {
-    color: #272a31;
+    color: #fff;
     font-size: 18px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -1063,7 +1116,7 @@
     background-color: #272a31;
     color: #fff;
     font-size: 15px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
@@ -1078,23 +1131,16 @@
     margin-bottom: 1em;
   }
 
-  .footer-details p {
+  .footer-details .footer-info {
     text-align: left;
   }
 
-  .footer-img {
+  .footer-logo {
     height: 100px;
     width: 30%;
     object-fit: contain;
     border-radius: 10px;
     z-index: 1;
-  }
-
-  .footer-img img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    border-radius: 10px;
   }
 
   .footer-details {

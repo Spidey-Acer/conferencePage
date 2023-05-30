@@ -55,7 +55,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
 const stickyNavMenu = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -90,42 +89,42 @@ const speakers = [
     imageSrc: './assets/images/speaker1.jpg',
     speakerTitle: 'Cybersecurity Analyst, SecureTech Solutions',
     speakerDescription:
-        'Emily Anderson is a seasoned cybersecurity analyst at SecureTech Solutions. With over 10 years of experience in the industry, she specializes in network security and vulnerability assessment. She is passionate about helping organizations protect their digital assets from emerging threats.',
+      'Emily Anderson is a seasoned cybersecurity analyst at SecureTech Solutions. With over 10 years of experience in the industry, she specializes in network security and vulnerability assessment. She is passionate about helping organizations protect their digital assets from emerging threats.',
   },
   {
     name: 'Michael Carter',
     imageSrc: './assets/images/speaker2.jpg',
     speakerTitle: 'Senior Software Engineer, TechSoft',
     speakerDescription:
-        'Michael Carter is a senior software engineer at TechSoft. He has over 15 years of experience in the industry and specializes in building scalable backend systems. He is passionate about building products that help people.',
+      'Michael Carter is a senior software engineer at TechSoft. He has over 15 years of experience in the industry and specializes in building scalable backend systems. He is passionate about building products that help people.',
   },
   {
     name: 'Sarah Patel',
     imageSrc: './assets/images/speaker3.jpg',
     speakerTitle: 'Director of Threat Intelligence, SecureNet Labs',
     speakerDescription:
-        'Sarah Patel is the director of threat intelligence at SecureNet Labs. She has over 20 years of experience in the industry and specializes in threat detection and analysis. She is passionate about helping organizations stay ahead of the curve when it comes to cybersecurity.',
+      'Sarah Patel is the director of threat intelligence at SecureNet Labs. She has over 20 years of experience in the industry and specializes in threat detection and analysis. She is passionate about helping organizations stay ahead of the curve when it comes to cybersecurity.',
   },
   {
     name: 'John Reynolds',
     imageSrc: './assets/images/speaker4.png',
     speakerTitle: 'Senior Security Engineer, TechShield Solutions',
     speakerDescription:
-        'John Reynolds is a senior security engineer at TechShield Solutions. He has over 15 years of experience in the industry and specializes in building secure systems. He is passionate about helping organizations build secure systems.',
+      'John Reynolds is a senior security engineer at TechShield Solutions. He has over 15 years of experience in the industry and specializes in building secure systems. He is passionate about helping organizations build secure systems.',
   },
   {
     name: 'Michelle Lee',
     imageSrc: './assets/images/speaker5.jpg',
     speakerTitle: 'Cybersecurity Consultant, CyberDefense Consulting',
     speakerDescription:
-        'Michelle Lee is a cybersecurity consultant at CyberDefense Consulting. She has over 10 years of experience in the industry and specializes in penetration testing and vulnerability assessment. She is passionate about helping organizations protect their digital assets from emerging threats.',
+      'Michelle Lee is a cybersecurity consultant at CyberDefense Consulting. She has over 10 years of experience in the industry and specializes in penetration testing and vulnerability assessment. She is passionate about helping organizations protect their digital assets from emerging threats.',
   },
   {
     name: 'Robert Thompson',
     imageSrc: './assets/images/speaker6.jpg',
     speakerTitle: 'Chief Technology Officer, SecureLink Solutions',
     speakerDescription:
-        'Robert Thompson is the chief technology officer at SecureLink Solutions. He has over 20 years of experience in the industry and specializes in building secure systems. He is passionate about helping organizations build secure systems.',
+      'Robert Thompson is the chief technology officer at SecureLink Solutions. He has over 20 years of experience in the industry and specializes in building secure systems. He is passionate about helping organizations build secure systems.',
   },
 ];
 

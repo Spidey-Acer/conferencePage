@@ -316,6 +316,20 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    z-index: 1;
+  }
+
+  #program::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.1em);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 
   #program h2 {
@@ -352,8 +366,6 @@
 
   .program-tile {
     position: relative;
-
-    /* Set position to enable pseudo-element */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -405,7 +417,7 @@
     height: 60px;
     width: 60px;
     border: 0.1em solid #fff;
-    border-radius: 20px;
+    border-radius: 10px;
   }
 
   .tile-img i {
@@ -448,6 +460,7 @@
     overflow: hidden;
     z-index: 1;
     background-color: #f5653d;
+    margin-bottom: 1em;
   }
 
   .see-whole-program {
@@ -468,6 +481,20 @@
     background-position: center;
     position: relative;
     padding-bottom: 2em;
+    z-index: 1;
+  }
+
+  #speakers::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.1em);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 
   #speakers h2 {
@@ -713,16 +740,24 @@
     padding: 5px 10px;
   }
 
-  .nav-links li a:hover {
-    background-color: #333;
+  .nav-links li:nth-child(1) a {
+    color: #f5653d;
+  }
+
+  .nav-links ul li a:hover {
+    border: 2px solid #f5653d;
     color: #fff;
     border-radius: 3px;
   }
 
   .navbar ul li a:hover {
-    background-color: #333;
-    color: #fff;
-    border-radius: 3px;
+    color: #000;
+    border-radius: 5px 10px 5px 10px;
+    border: 2px solid #f5653d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
   }
 
   .logo {
@@ -730,6 +765,14 @@
     align-items: center;
     justify-content: center;
     padding: 1em;
+  }
+
+  footer img {
+    height: 100px;
+    width: 30%;
+    object-fit: contain;
+    border-radius: 10px;
+    z-index: 1;
   }
 
   .logo img {
@@ -743,10 +786,6 @@
 
   .nav-links li {
     margin-right: 10px;
-  }
-
-  .nav-links li:nth-child(1) a {
-    color: #f5653d;
   }
 
   .nav-links li:nth-child(6) {
@@ -1299,14 +1338,6 @@
 
   .footer-details p {
     text-align: left;
-  }
-
-  footer img {
-    height: 100px;
-    width: 30%;
-    object-fit: contain;
-    border-radius: 10px;
-    z-index: 1;
   }
 
   .footer-details {
