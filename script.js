@@ -43,7 +43,7 @@ mobileMenuItem.forEach((item) => {
 
 // sticky mobile menu
 
-const stickyMobileMenu = document.querySelector('.main-nav, navbar, top-bar');
+const stickyMobileMenu = document.querySelector('.main-nav');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
@@ -55,15 +55,30 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// const stickyMobileMenu = document.querySelector('.navbar');
 
-// window.addEventListener('scroll', () => {
-//   if (window.scrollY > 0) {
-//     stickyMobileMenu.classList.add('sticky');
-//   } else {
-//     stickyMobileMenu.classList.remove('sticky');
-//   }
-// });
+const stickyNavMenu = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    stickyNavMenu.classList.add('sticky');
+  } else {
+    stickyNavMenu.classList.remove('sticky');
+
+    stickyNavMenu.classList.remove('sticky');
+  }
+});
+
+const stickyTopBarMenu = document.querySelector('.top-bar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    stickyTopBarMenu.classList.add('sticky');
+  } else {
+    stickyTopBarMenu.classList.remove('sticky');
+
+    stickyTopBarMenu.classList.remove('sticky');
+  }
+});
 
 // Get the speakers list element
 const speakersList = document.getElementById('speakers-list');

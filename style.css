@@ -1,5 +1,5 @@
 /* --Font-- */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 /* --Reset Styles-- */
 * {
@@ -34,7 +34,19 @@
     height: 4em;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 0;
+  }
+
+  .main-nav::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4em;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.8px);
+    z-index: -1;
   }
 
   .menu-button {
@@ -59,7 +71,7 @@
     width: 100%;
     color: white;
     font-size: 1.5em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-decoration: none;
     border-radius: 0.5em;
   }
@@ -159,7 +171,7 @@
     width: 90%;
     color: white;
     font-size: 1.5em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-decoration: none;
     border: 0.1em solid white;
     border-radius: 0.5em;
@@ -170,17 +182,10 @@
     border-radius: 2em;
   }
 
-  .header {
-    width: 100%;
-    position: absolute;
-  }
-
-  .header.sticky {
+  .main-nav.sticky {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
     z-index: 3;
   }
 
@@ -216,7 +221,7 @@
   .msg1 {
     color: #f5653d;
     font-size: 1.8em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     align-self: flex-start;
     font-weight: 600;
@@ -228,7 +233,7 @@
     height: auto;
     font-size: 2.5em;
     line-height: 1em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 900;
     text-align: left;
     background-image: url(./assets/images/navBG.jpg);
@@ -246,7 +251,7 @@
   .msg2 {
     color: #272a31;
     font-size: 0.8em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 600;
     border: 2px solid #00aa;
@@ -269,7 +274,7 @@
     width: 100%;
     font-size: 20px;
     line-height: 0.9em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 900;
     text-align: left;
     align-self: flex-start;
@@ -287,7 +292,7 @@
     padding-right: 3.5em;
     font-size: 20px;
     line-height: 0.9em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     background-image: url(./assets/images/navBG.jpg);
     background-repeat: no-repeat;
@@ -316,7 +321,7 @@
   #program h2 {
     color: white;
     font-size: 2em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: center;
     font-weight: 400;
     padding: 0.5em;
@@ -359,14 +364,14 @@
     color: #fff;
     border-radius: 10px;
     overflow: hidden;
-    z-index: 0;
+    z-index: 1;
   }
 
   .program-tile::after {
     content: "";
     position: absolute;
-    height: 8px;
-    width: 58px;
+    height: 5px;
+    width: 40px;
     border-radius: 10px 20px 20px 10px;
     background-color: #f5653d;
     top: 0;
@@ -390,7 +395,7 @@
   }
 
   .program-tile:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     border-radius: 10px;
     color: #272a31;
@@ -413,7 +418,7 @@
 
   .program-title {
     font-size: 0.85em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 900;
     padding: 0.5em;
@@ -422,7 +427,7 @@
 
   .program-desc {
     font-size: 0.8em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 300;
     line-height: 1.3em;
@@ -468,7 +473,7 @@
   #speakers h2 {
     color: white;
     font-size: 2em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: center;
     font-weight: 400;
     padding: 0.5em;
@@ -535,11 +540,13 @@
     align-items: flex-start;
     height: 100%;
     width: 70%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 
   .speaker-name {
     font-size: 1.3em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 800;
     padding: 0.2em;
@@ -548,11 +555,11 @@
 
   .speaker-title {
     position: relative;
-    font-size: 0.9em;
-    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 900;
-    padding: 0.5em;
+    padding: 0.1em;
     color: #f5653d;
   }
 
@@ -565,16 +572,16 @@
     width: 100px;
     background-color: #f5653d;
     margin: 0 auto;
-    margin-top: 0.3em;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
   }
 
   .speaker-description {
-    font-size: 0.9em;
-    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    font-family: "Lato", sans-serif;
     text-align: left;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 14px;
-    padding: 0.5em;
     color: #fff;
   }
 
@@ -584,7 +591,7 @@
     font-size: 1.2em;
     color: #fff;
     border-radius: 10px;
-    z-index: 3;
+    z-index: 1;
     background-color: #f5653d;
   }
 
@@ -602,7 +609,7 @@
     font-size: 1.2em;
     color: #fff;
     border-radius: 10px;
-    z-index: 3;
+    z-index: 1;
     background-color: #ff3700;
   }
 
@@ -639,7 +646,7 @@
     height: 2em;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: -1;
     padding-right: 20px;
   }
 
@@ -666,13 +673,15 @@
     align-items: center;
     color: white;
     font-size: 1em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-decoration: none;
   }
 
   .navbar {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    gap: 2em;
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -680,12 +689,11 @@
     height: 5em;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: -1;
     padding-right: 20px;
-    top: 2em;
+    margin-top: 2em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     background-color: #fff;
-
   }
 
   .navbar ul {
@@ -695,13 +703,12 @@
     list-style: none;
     position: relative;
     height: 100%;
-    width: 100%;
   }
 
   .navbar ul li a {
     color: gray;
     font-size: 1em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-decoration: none;
     padding: 5px 10px;
   }
@@ -719,12 +726,10 @@
   }
 
   .logo {
-    margin-right: 20em;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1em;
-
   }
 
   .logo img {
@@ -740,12 +745,31 @@
     margin-right: 10px;
   }
 
+  .nav-links li:nth-child(1) a {
+    color: #f5653d;
+  }
+
+  .nav-links li:nth-child(6) {
+    border: 2px solid #f5653d;
+    padding: 0.8em;
+    border-radius: 5px 10px 5px 10px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #000;
+  }
+
   .navbar.sticky {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
+    z-index: 3;
+  }
+
+  .top-bar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 3;
   }
 
@@ -768,8 +792,7 @@
     background-position: center;
     position: relative;
     backdrop-filter: blur(0);
-    padding: 100px 100px 400px 200px;
-    z-index: 0;
+    padding: 101px 400px 200px 100px;
   }
 
   #home::before {
@@ -777,7 +800,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    height: 2250px;
+    height: 2000px;
     width: 100%;
     border-radius: 10px 20px 20px 10px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -791,7 +814,7 @@
     justify-content: flex-start;
     align-items: center;
     height: auto;
-    width: 100%;
+    width: 700px;
     max-width: 900px;
     align-self: flex-start;
     backdrop-filter: blur(0.1em);
@@ -800,7 +823,7 @@
   .msg1 {
     color: #f5653d;
     font-size: 2em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     align-self: flex-start;
     font-weight: 600;
@@ -812,7 +835,7 @@
     height: auto;
     font-size: 3em;
     line-height: 1em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 900;
     text-align: left;
     background-image: url(./assets/images/navBG.jpg);
@@ -830,7 +853,7 @@
   .msg2 {
     color: #272a31;
     font-size: 1em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 600;
     border: 2px solid #00aa;
@@ -853,7 +876,7 @@
     width: 100%;
     font-size: 20px;
     line-height: 0.9em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 900;
     text-align: left;
     align-self: flex-start;
@@ -871,7 +894,7 @@
     padding-right: 3.5em;
     font-size: 20px;
     line-height: 0.9em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     background-image: url(./assets/images/navBG.jpg);
     background-repeat: no-repeat;
@@ -898,15 +921,28 @@
     position: relative;
   }
 
+  #program::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1000px;
+    width: 100%;
+    border-radius: 10px 20px 20px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0.1em);
+    z-index: 0;
+  }
+
   #program h2 {
     color: white;
     font-size: 2em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: center;
     font-weight: 400;
     padding: 0.5em;
     margin: 0 auto;
-    z-index: 0;
+    z-index: 1;
   }
 
   #program h2::after {
@@ -945,7 +981,7 @@
     color: #fff;
     border-radius: 10px;
     overflow: hidden;
-    z-index: 0;
+    z-index: 1;
   }
 
   .program-tile::after {
@@ -992,7 +1028,7 @@
 
   .program-title {
     font-size: 0.85em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 900;
     padding: 0.5em;
@@ -1001,7 +1037,7 @@
 
   .program-desc {
     font-size: 0.8em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 300;
     line-height: 1.3em;
@@ -1051,9 +1087,10 @@
     background-position: center;
     position: relative;
     padding-bottom: 2em;
+    z-index: 1;
   }
 
-  #speakers::before {
+  #speakers::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1063,17 +1100,16 @@
     border-radius: 10px 20px 20px 10px;
     background-color: rgba(255, 252, 252, 0.1);
     backdrop-filter: blur(0.1em);
-    z-index: 1;
+    z-index: -1;
   }
 
   #speakers h2 {
     color: #272a31;
     font-size: 2em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: center;
     font-weight: 800;
     padding: 0.5em;
-    z-index: 1;
   }
 
   #speakers h2::after {
@@ -1150,7 +1186,7 @@
 
   .speaker-name {
     font-size: 1.3em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 800;
     padding: 0.5em;
@@ -1160,7 +1196,7 @@
   .speaker-title {
     position: relative;
     font-size: 0.7em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 900;
     padding: 0.5em;
@@ -1181,7 +1217,7 @@
 
   .speaker-description {
     font-size: 10px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: left;
     font-weight: 700;
     line-height: 14px;
@@ -1208,7 +1244,7 @@
   #partners h3 {
     color: gray;
     font-size: 2em;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: center;
     font-weight: 800;
     padding: 0.5em;
@@ -1247,13 +1283,14 @@
     align-content: center;
     color: #272a31;
     font-size: 12px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 28px;
     text-align: center;
     align-self: center;
     font-weight: 400;
     text-decoration: none;
     z-index: 1;
+    padding: 0 146px;
   }
 
   .logo-text {
@@ -1264,19 +1301,12 @@
     text-align: left;
   }
 
-  .footer-img {
+  footer img {
     height: 100px;
     width: 30%;
     object-fit: contain;
     border-radius: 10px;
     z-index: 1;
-  }
-
-  .footer-img img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    border-radius: 10px;
   }
 
   .footer-details {
