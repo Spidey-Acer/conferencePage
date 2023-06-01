@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="./assets/images/speaker2" alt="logo" width="140"  height="auto" />
+  <img src="./pages/pageAssets/DefenderCage Logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Optimus Cage Defender Cyber Security Conference Summit  README</b></h3>
