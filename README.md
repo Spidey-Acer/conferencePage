@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="./assets/images/speaker2" alt="logo" width="140"  height="auto" />
+  <img src="./pages/pageAssets/DefenderCage%20Logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Optimus Cage Defender Cyber Security Conference Summit  README</b></h3>
@@ -132,7 +132,7 @@ You can deploy this project using: <https://peter-kibet.github.io/conferencePage
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Client Testimonials - I could add a section to my website where I showcase feedback and testimonials from my previous clients or employers. This can help build trust with potential clients and give them a better idea of what it's like to work with me.]**
+- [ ] **[Audience Testimonials - I could add a section to my website where I showcase feedback and testimonials from my previous or summit audience and employers. This can help build trust with potential future audience and give them a better idea of what it's like to attend the summits.]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
